@@ -48,14 +48,17 @@ docker-compose up --build
 curl -F "file=@myreport.txt" http://localhost:5000/gateway/upload
 ```
 Ответ:
+```bash
 json
 
 { "file_id": "abc123-..." }
+```
 🔸 Анализ файла
 ```bash
 curl http://localhost:5000/gateway/analyze/abc123
 ```
 Ответ:
+```bash
 json
 
 {
@@ -63,6 +66,7 @@ json
   "words": 210,
   "characters": 1456
 }
+```
 🧪 Тестирование
 Swagger доступен для всех сервисов
 
